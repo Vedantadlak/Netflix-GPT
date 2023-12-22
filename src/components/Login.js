@@ -21,15 +21,14 @@ const Login = () => {
   const password = useRef(null);
 
   const handleButtonClick = () => {
-    const message = checkValidData(
-      name.current.value,
-      email.current.value,
-      password.current.value
-    );
-    setErrorMessage(message);
-    if (message) return;
-
     if (!isSignInForm) {
+      const message = checkValidData(
+        name.current.value,
+        email.current.value,
+        password.current.value
+      );
+      setErrorMessage(message);
+      if (message) return;
       // Sign Up Logic
       createUserWithEmailAndPassword(
         auth,
