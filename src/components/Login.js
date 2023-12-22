@@ -21,7 +21,11 @@ const Login = () => {
   const password = useRef(null);
 
   const handleButtonClick = () => {
-    const message = checkValidData(email.current.value, password.current.value);
+    const message = checkValidData(
+      name.current.value,
+      email.current.value,
+      password.current.value
+    );
     setErrorMessage(message);
     if (message) return;
 
